@@ -15,17 +15,25 @@
   --instagram-2: hsl(329, 70%, 58%);
   --youtube: hsl(348, 97%, 39%);
   --cardGray: hsl(227, 47%, 96%);
+  --light-gray: hsl(225, 100%, 98%);
+  --baseBackground: white;
+  --baseColor: #1d2029;
+  --switchSpinner: white;
+  --switch: #5f616d;
 }
 
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
+  background: var(--baseBackground);
+  color: var(--baseColor);
 }
 
 .header {
-  background-color: hsl(225, 100%, 98%);
+  background-color: var(--lightGray);
   padding-bottom: 100px;
   border-radius: 0 0 20px 20px;
+  padding-top: 2em;
 }
 
 .header h1 {
@@ -177,7 +185,7 @@ span .is-danger {
     height: 40px;
     display: block;
     border-radius: 20px;
-    background: hsl(228, 12%, 44%);
+    background: var(--switch);
     width: 80px;
     padding: 5px;
     box-sizing: border-box;
@@ -190,7 +198,7 @@ span .is-danger {
     display: block;
     width: 30px;
     height: 30px;
-    background: white;
+    background: var(--switchSpinner);
     border-radius: 50%;
     transform: translateX(40px);
     transition: .3s;
@@ -224,7 +232,7 @@ span .is-danger {
 
 .card-small-views {
   /* border: 1px solid green; */
-  color: hsl(228, 12%, 44%);
+  color: var(--cardTitle);
   font-size: 13px;
   font-weight: 700;
 }
@@ -294,6 +302,38 @@ span .is-danger {
     /* border: 1px solid purple; */
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .header-text {
+      border: none;
+  }
+
+  .header-grid {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+  }
+
+  .is-dark-mode {
+    --cardGray: #252b43;
+    --baseBackground: #1d2029;
+    --baseColor: white;
+    --gray: #8088ad;
+    --lightGray: #1d2029;
+    --cardTitle: #8088ad;
+    --switchSpinner: #282943;
+    --switch: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+  }
+  
+  .is-light-mode {
+    --gray: #5f616d;
+    --cardGray: #f0f3fa;
+    --lightGray: #f8f9fe;
+    --cardTitle: #6f717e;
+    --baseBackground: white;
+    --baseColor: #1d2029;
+    --switchSpinner: white;
+    --switch: #5f616d;
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -305,8 +345,15 @@ span .is-danger {
     }
 
     :root {
-        --cardGray: hsl(228, 28%, 20%);
-    }
+        --cardGray: #252b43;
+        --baseBackground: #1d2029;
+        --baseColor: white;
+        --gray: #8088ad;
+        --lightGray: #1d2029;
+        --cardTitle: #8088ad;
+        --switchSpinner: #282943;
+        --switch: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+      }
 
     .card-social span {
         color: hsl(228, 34%, 66%);
