@@ -7,145 +7,145 @@
 } */
 
 :root {
-    --lime-green: hsl(163, 72%, 41%);
-    --bright-red: hsl(356, 69%, 56%);
-    --facebook: hsl(208, 92%, 53%);
-    --twitter: hsl(203, 89%, 53%);
-    --instagram-1:hsl(37, 97%, 70%);
-    --instagram-2: hsl(329, 70%, 58%);
-    --youtube: hsl(348, 97%, 39%);
-    }
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram-1: hsl(37, 97%, 70%);
+  --instagram-2: hsl(329, 70%, 58%);
+  --youtube: hsl(348, 97%, 39%);
+  --cardGray: hsl(227, 47%, 96%);
+}
 
 body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .header {
-    background-color: hsl(225, 100%, 98%);
-    padding-bottom: 100px;
-    border-radius: 0 0 20px 20px;
+  background-color: hsl(225, 100%, 98%);
+  padding-bottom: 100px;
+  border-radius: 0 0 20px 20px;
 }
 
 .header h1 {
-    margin: 0;
-    padding: 30px 0 0;
-    font-size: 25px;
+  margin: 0;
+  padding: 30px 0 0;
+  font-size: 25px;
 }
 
 .header-text {
-    margin: 0;
-    padding-top: 5px;
-    font-size: 15px;
-    font-weight: 700;
-    color: hsl(228, 12%, 44%);
-    border-bottom: 2px solid hsl(228, 12%, 44%);
-    padding-bottom: 15px;
-    margin-bottom: 10px;
+  margin: 0;
+  padding-top: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+  border-bottom: 2px solid hsl(228, 12%, 44%);
+  padding-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .top-cards {
-    margin-top: -40px;
+  margin-top: -40px;
 }
 
 .wrapper {
-    padding: 0 25px;
+  padding: 0 30px;
 }
 
 .grid {
-    display: grid;
-    grid-row-gap: 30px;
+  display: grid;
+  grid-row-gap: 25px;
 }
 
 .card {
-    /* border: 1px solid red; */
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: hsl(227, 47%, 96%);
-    text-align: center;
-    padding: 25px 0;
-    position: relative;
-    /* margin-bottom: 30px; */
+  /* border: 1px solid red; */
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--cardGray);
+  text-align: center;
+  padding: 25px 0;
+  position: relative;
+  /* margin-bottom: 30px; */
 }
 
 .card::before {
-    content: "";
-    height: 4px;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+  content: "";
+  height: 4px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .card.facebook::before {
-    background: var(--facebook);
+  background: var(--facebook);
 }
 .card.twitter::before {
-    background: var(--twitter);
+  background: var(--twitter);
 }
 
 .card.instagram::before {
-    background: linear-gradient(to right, var(--instagram-1), var(--instagram-2));
+  background: linear-gradient(to right, var(--instagram-1), var(--instagram-2));
 }
 
 .card.youtube::before {
-    background: var(--youtube);
+  background: var(--youtube);
 }
 
-
 .card-followers {
-    display: flex;
-    flex-direction: column;
-    /* border: 1px solid purple; */
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid purple; */
 }
 
 .card-followers-numbers {
-    font-size: 50px;
-    font-weight: 700;
+  font-size: 50px;
+  font-weight: 700;
 }
 
 .card-followers-title {
-    /* border: 1px solid blue; */
-    color: hsl(228, 12%, 44%);
-    font-size: 10.5px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+  /* border: 1px solid blue; */
+  color: hsl(228, 12%, 44%);
+  font-size: 10.5px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
 .card-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-social img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .card-social span {
-    font-size: 12px;
-    color: hsl(230, 17%, 14%);
-    font-weight: 700;
+  font-size: 12px;
+  color: hsl(230, 17%, 14%);
+  font-weight: 700;
 }
 
 .card-followers-count {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    color: hsl(163, 72%, 41%);
-    font-size: 12px;
-    font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: hsl(163, 72%, 41%);
+  font-size: 12px;
+  font-weight: 700;
 }
 
- .card-followers-count img {
-    margin-right: 3px;
+.card-followers-count img {
+  margin-right: 3px;
 }
 
 .card-followers-count.is-danger {
-    color: var(--bright-red);
+  color: var(--bright-red);
 }
 
 /* .card-followers-count span {
@@ -154,88 +154,174 @@ body {
 }  */
 
 span .is-danger {
-    color: var(--bright-red);
+  color: var(--bright-red);
 }
 
-.toggle p {
-    margin: 0;
+.checkbox:checked ~ .switch:before {
+    /* border: 1px solid red; */
+    transform: translateX(0);
 }
 
-.toggle {
-    padding: 5px 0;
+.dark-mode {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    padding-top: 1em;
 }
 
-.toggle-text {
-    font-weight: 700;
+.checkbox {
+    display: none;
+}
+
+.switch {
+    /* border: 1px solid red; */
+    height: 40px;
+    display: block;
+    border-radius: 20px;
+    background: hsl(228, 12%, 44%);
+    width: 80px;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+}
+
+.switch::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    transform: translateX(40px);
+    transition: .3s;
+    will-change: transform;
 }
 
 .overview {
-    padding-bottom: 2em;
+  padding-bottom: 2em;
 }
 
 .overview h2 {
-    color: hsl(228, 12%, 44%);
-    margin: 0;
-    margin-top: 40px;
-    margin-bottom: 25px;
+  color: hsl(228, 12%, 44%);
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 25px;
 }
 
 .card-small {
-    /* border: 1px solid orange; */
-    display: grid;
-    background: hsl(227, 47%, 96%);
-    grid-row-gap: 1.5em;
-    grid-template-columns: repeat(2, 1fr);
-    border-radius: 10px;
-    padding: 1.7em;
+  /* border: 1px solid orange; */
+  display: grid;
+  background: var(--cardGray);
+  grid-row-gap: 1.5em;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 10px;
+  padding: 1.7em;
 }
 
 .card-small p {
-    margin: 0;
+  margin: 0;
 }
 
 .card-small-views {
-    /* border: 1px solid green; */
-    color: hsl(228, 12%, 44%);
-    font-size: 13px;
-    font-weight: 700;
+  /* border: 1px solid green; */
+  color: hsl(228, 12%, 44%);
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .card-small-icon {
-    /* border: 1px solid blue; */
-    display: flex;
-    justify-content: flex-end;
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: flex-end;
 }
 
 .card-small-number {
-    line-height: 0.8;
-    /* border: 1px solid red; */
-    font-size: 40px;
-    font-weight: 700;
+  line-height: 0.8;
+  /* border: 1px solid red; */
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .card-small-percentage {
-    /* border: 1px solid purple; */
-    color: var(--lime-green);
-    text-align: right;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+  /* border: 1px solid purple; */
+  color: var(--lime-green);
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .card-small-percentage.is-danger {
-    color: var(--bright-red);
+  color: var(--bright-red);
 }
 
 .card-small-percentage span {
-    display: flex;
-    font-size: 12px;
-    align-items: center;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
 }
 
 .card-small-percentage img {
-    margin-right: 5px;
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    /* border: 1px solid red; */
+  }
+
+  .grid {
+    /* border: 1px solid purple; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 25px;
+  }
+
+  .wrapper {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    /* border: 1px solid purple; */
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    /* border: 1px solid purple; */
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: hsl(230, 17%, 14%);
+        /* background: red; */
+        color: hsl(0, 0%, 100%);
+    }
+
+    :root {
+        --cardGray: hsl(228, 28%, 20%);
+    }
+
+    .card-social span {
+        color: hsl(228, 34%, 66%);
+    }
+
+    .header {
+        background: hsl(232, 19%, 15%);
+    } 
+
+    .switch {
+        background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    }
+
+    .switch:before {
+        background: #282943;
+    }
+
 }
